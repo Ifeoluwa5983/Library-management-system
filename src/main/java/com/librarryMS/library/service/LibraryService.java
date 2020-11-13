@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import com.librarryMS.library.entity.Book;
+import com.librarryMS.library.entity.Users;
 
 public interface LibraryService {
 	
@@ -11,10 +12,13 @@ public interface LibraryService {
 	
 	public Optional<Book> getBookByName(String title);
 	
-	public void saveBook(Book book);
+	public void deleteBookByName(String title);
 	
-	public void deleteByName(String title);
+	public Book borrowBook(Book book, Users name);
 	
-	public void borrowBook(String title);
+	public Book addBook(Book book);
+	
+	public void returnBook(Book book);
+
 
 }

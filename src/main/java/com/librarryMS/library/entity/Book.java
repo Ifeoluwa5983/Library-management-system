@@ -22,9 +22,12 @@ public class Book {
 	private long id;
 	
 	@ManyToOne
-	@JoinColumn(name = "users")
+	@JoinColumn(name = "library")
+	private Library library;
 	private Users users;
 	private String title;
+	
+	private boolean isAvailable = true;
 	
 	
 
