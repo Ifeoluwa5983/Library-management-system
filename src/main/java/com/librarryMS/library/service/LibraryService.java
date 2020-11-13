@@ -5,7 +5,7 @@ import java.util.Optional;
 
 import com.librarryMS.library.entity.Book;
 
-public interface BookService {
+public interface LibraryService {
 	
 	public List<Book> findAll();
 	
