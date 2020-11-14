@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import com.librarryMS.library.entity.Book;
+import com.librarryMS.library.entity.Users;
 import com.librarryMS.library.service.LibraryServiceImpl;
 
 @Controller
@@ -52,5 +53,15 @@ public class LibraryController {
 		book.setId(0);
 		lsi.addBook(book);
 		return book;
+	}
+	
+	@GetMapping("/borrowBook")
+	public Book borrowBook(@PathVariable Book book, Users name) {
+		return lsi.borrowBook(book, name);
+	}
+	
+	@PostMapping("/returnBook")
+	public Book returnBook(@RequestBody Book book) {
+		return lsi.returnBook(book);
 	}
 }

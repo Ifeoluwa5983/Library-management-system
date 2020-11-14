@@ -55,9 +55,10 @@ public class LibraryServiceImpl implements LibraryService {
 	}
 
 	@Override
-	public void returnBook(Book book) {
-		libraryRepository.save(book);
+	public Book returnBook(Book book) {
 		book.setAvailable(true);
+		book.setId(0);
+		return libraryRepository.save(book);
 		
 	}
 

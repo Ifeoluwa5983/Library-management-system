@@ -18,7 +18,7 @@ public interface LibraryService {
 	
 	public Book addBook(Book book);
 	
-	public void returnBook(Book book);
+	public Book returnBook(Book book);
 
 
 }
